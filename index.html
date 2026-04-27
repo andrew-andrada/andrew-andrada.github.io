@@ -132,6 +132,26 @@
     line-height: 1.55;
   }
   .case .takeaway strong { color: var(--ink); }
+  .case figure {
+    margin: 22px 0 8px;
+    padding: 0;
+  }
+  .case figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: #fff;
+  }
+  .case figure figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .case figure figcaption strong { color: var(--ink-soft); font-style: normal; }
   .case .case-links {
     margin-top: 14px;
     font-size: 14px;
@@ -169,7 +189,7 @@
     <div class="links">
       <a href="mailto:Andrew.p.andrada@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/andrew-andrada/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?user=isQdJ2UAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://github.com/andrew-andrada" target="_blank" rel="noopener">GitHub</a>
     </div>
   </header>
@@ -190,16 +210,24 @@
       <span class="tag">100+ interviews</span>
       <span class="tag">Field study</span>
     </div>
+    <figure>
+      <img src="images/Fig%201.png" alt="Four-step care pathway: caregiver seeks treatment with local CHW, diagnosis and correct administration of RAS, immediate referral to a health facility within 24 hours, and complete treatment with injectable artesunate and oral AL.">
+      <figcaption><strong>The user journey under study.</strong> The four-step pathway eligible children must complete to receive lifesaving care. Each handoff between steps is a place where the system can break down.</figcaption>
+    </figure>
     <dl>
       <dt>Question</dt>
       <dd>Why are eligible children in three rural districts not completing the referral pathway from initial diagnosis to definitive care for severe malaria, and where in the journey is the system breaking down?</dd>
       <dt>Approach</dt>
       <dd>Mixed-methods process evaluation across community health workers, emergency transport providers, and health facilities. Combined <strong>100+ semi-structured interviews</strong>, structured facility-readiness assessments, and caregiver questionnaires. Trained and managed a two-person team through the qualitative coding pass in NVivo.</dd>
       <dt>Findings</dt>
-      <dd>Identified specific bottlenecks at three layers — community-level case identification, transit, and facility-level readiness — and characterized the friction patterns that prevented completion of the care pathway. Recommendations informed national program redesign.</dd>
+      <dd>Of 300 enrolled children, only 56% completed the full treatment cascade. The largest single drop-off occurred at health-facility severe-malaria diagnosis, and overall friction varied dramatically by district — Mwinilunga lost more than half of patients between referral completion and final treatment, while Serenje retained nearly all of them. Identified specific bottlenecks at three layers (community-level case identification, transit, and facility readiness) and characterized the friction patterns preventing completion of care.</dd>
       <dt>Outputs</dt>
-      <dd>Manuscript in preparation (Malaria Journal); poster, ASTMH Annual Meeting 2023; recommendations adopted by the Zambia National Malaria Elimination Program.</dd>
+      <dd>Manuscript submitted to <em>PLOS One</em> (March 2026); poster, ASTMH Annual Meeting 2023; recommendations informing program redesign at the Zambia National Malaria Elimination Program.</dd>
     </dl>
+    <figure>
+      <img src="images/Fig%203.png" alt="Bar chart titled 'Overall Progression and Attrition Across the Severe Malaria Cascade of Care' showing the percent of enrolled children reaching each step. Enrolled by CHW: 100%. RDT conducted: 95.3%. RDT result: 79.7%. RAS administered: 72.7%. Completed referral to health facility: 69.7%. Health facility diagnosis severe malaria: 62%. Injectable AS administered: 61.3%. AL administered: 56.3%.">
+      <figcaption><strong>The funnel.</strong> Progression and attrition across the eight-step severe-malaria cascade of care. Each percentage is the share of enrolled children who reached that step. The biggest single drop is at the diagnosis-result handoff; cumulative attrition is 44 percentage points end-to-end.</figcaption>
+    </figure>
     <div class="takeaway">
       <strong>UXR translation.</strong> This is journey research with a different label. Identifying where a real-world workflow breaks down — onboarding, preparation, task completion, return — is the same analytical posture quantitative UXR teams use to study patient or user lifecycles, with the same toolkit (interviews + structured assessments + survey instruments + segmentation across a heterogeneous user base).
     </div>
@@ -217,12 +245,16 @@
       <dt>Question</dt>
       <dd>Routine surveillance data from a national health information system is the basis for high-stakes resource allocation decisions. How accurately does this tracking system actually represent the underlying disease burden it claims to measure?</dd>
       <dt>Approach</dt>
-      <dd>Compared routine surveillance estimates against a gold-standard prospective cohort across the same geographies and time windows. Quantified directional bias, classification error, and coverage gaps; conducted sensitivity analyses to bound the policy conclusions defensibly drawable from the routine system alone.</dd>
+      <dd>Compared routine DHIS2 surveillance estimates against a gold-standard prospective cohort across the same geographies and time windows. Used Bland-Altman analysis to assess agreement, scatterplots and correlation to assess concordance, and negative-binomial mixed-effects regression to quantify the magnitude of disagreement after adjusting for age and seasonality. Conducted sensitivity analyses to bound the policy conclusions the routine system alone could defensibly support.</dd>
       <dt>Findings</dt>
-      <dd>Documented systematic under-reporting and case-classification error in specific contexts. Established the boundary between conclusions the routine system supports and conclusions that require triangulation with primary data.</dd>
+      <dd>DHIS2 systematically <strong>underestimated malaria incidence by 43%</strong> on average compared to the cohort (IRR 0.57, 95% CI 0.51–0.63). The gap widened sharply during peak transmission — DHIS2 detected 44% fewer cases in March and <strong>70% fewer in June</strong>. Older children (5–14) were disproportionately under-counted in the routine system. District-level concordance varied: Bland-Altman analysis showed reasonable agreement in two districts and clear divergence in a third, defining the boundary of where the routine system could be trusted alone vs. where triangulation was required.</dd>
       <dt>Outputs</dt>
-      <dd>Poster, ASTMH Annual Meeting 2024 (New Orleans); chapter of dissertation; methodological framework being prepared as a manuscript.</dd>
+      <dd>Poster, ASTMH Annual Meeting 2024 (New Orleans); Aim 1 of dissertation (Tulane, June 2025); methodological framework being prepared as a manuscript.</dd>
     </dl>
+    <figure>
+      <img src="images/bland-altman-dhis2-vs-cohort.png" alt="Bland-Altman plots comparing DHIS2 routine surveillance against ATSB prospective cohort incidence Z-scores across all health facilities and three districts (Kaoma, Luampa, Nkeyema). The plots show mean of DHIS2 and ATSB Z-scores on the x-axis and the difference between them on the y-axis. Most points fall within limits of agreement for the overall analysis and for Kaoma and Luampa, while Nkeyema shows greater variability indicating lower agreement.">
+      <figcaption><strong>Instrumentation accuracy.</strong> Bland-Altman analysis of agreement between the routine tracking system (DHIS2) and the gold-standard cohort (ATSB), overall and stratified by district. Each point is a health-facility-month; dashed lines mark the limits of agreement. Two districts (top three panels) show acceptable agreement; the third (bottom) does not — bounding where the routine system alone supports policy conclusions.</figcaption>
+    </figure>
     <div class="takeaway">
       <strong>UXR translation.</strong> This is exactly the problem product analytics teams face when validating that event instrumentation actually measures what users do. Quantifying the gap between what your tracking system records and what is actually happening — and being explicit about which conclusions are defensible given that gap — is core to running a rigorous quant function on event-level product data.
     </div>
